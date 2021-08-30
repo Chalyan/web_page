@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <label for="fname">name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">surname:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <select name="genders" id="genders">
+            <option></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button onclick="myFunction()">apply</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction()
+            {
+                var name="Please input all needed fields";
+                var first_name=document.getElementById("fname").value;
+                var last_name=document.getElementById("lname").value;
+                var genders=document.getElementById("genders").value;
+                
+                if(first_name!="" && last_name!=""
+                && genders!= "")
+                {
+                    name="Hello user with name " + first_name + " " + 
+                    last_name + " who appears to be " + genders;
+                }
+                document.getElementById("demo").innerHTML=name;
+            }
+        </script>
+    </body>
+</html>
